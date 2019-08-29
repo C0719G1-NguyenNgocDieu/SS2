@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Goc tao giu gio va phut</title>
+</head>
+<body>
+
+<script>
+    let hour = parseInt(prompt('mời bạn nhập số giờ'));
+    let min = parseInt(prompt('mời bạn nhập số phút'));
+    if(hour>=0&&hour<=24&&min<=60)
+    {
+        if(hour>=12){
+        hour=hour%12;
+        if(hour==0 && min==0){
+        alert('0');
+    } else if (hour<min/5){
+        let goc =min*6-hour*30-min/2;
+        alert(goc);
+    }else{
+        let goc=hour*30-min*6+min/2;
+
+        alert(goc);
+    }}}else{
+        alert('Nhap lai');
+    }
+
+</script>
+</body>
+</html>
